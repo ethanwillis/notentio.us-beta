@@ -1,0 +1,15 @@
+template(name="header")
+	.navbar.navbar-default.navbar-fixed-top(role="navigation")
+		.container.container-fluid
+			.navbar-header
+				button.navbar-toggle.collapsed(type="button")
+					span.sr-only Toggle navigation
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				a.navbar-brand notentio.us
+			.collapse.navbar-collapse
+				ul.nav.navbar-nav
+					li.active
+						a(href="{{pathFor 'index'}}") Home
+						+site_links

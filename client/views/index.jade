@@ -1,0 +1,90 @@
+template(name="index")
+	.row
+		.col-xs-12
+			+beta_signup
+	hr
+	.row
+		.col-xs-12 
+			+what_is_notentious
+			.col-xs-8.col-xs-offset-2
+				hr
+			+how_it_works
+
+template(name="what_is_notentious")
+	.jumbotron.backgroundCH1.text-center(style="padding-bottom: 0px;")
+		h1.coolHeading2.whiteFont
+			span.glyphicon.glyphicon-file
+			| What is notentious?
+		p.whiteFont notentio.us allows you to record, broadcast, and
+			em(rel="tooltip", data-toggle="tooltip", title="We convert recordings of your lectures into searchable, printable text notes!") noteify*
+			| your class lectures.
+
+template(name="beta_signup")
+	.row
+		.col-xs-12
+			+signup_form
+	.row
+		.col-xs-12.text-center
+			//- h1.whiteFont.coolHeading2 
+			//-	em
+			//-		| Number of Beta Signups So Far!
+			//- +signup_counter	
+
+template(name="signup_counter")
+	#signupCounter.text-center
+
+template(name="signup_form")
+	.jumbotron.backgroundCH1(style="padding-top: 0px; padding-bottom: 0px;")
+		h1.coolHeading2.whiteFont(style="text-shadow: black 1px 1px 2px;")
+			| Enter your email below for early access to Notentio.us! 
+		form#signupForm(role="form")
+			.form-group
+				.well#successAlert(style="display: none; padding: 2px 2px 2px 2px")
+					.panel-body.text-center
+						.alert.alert-success.text-center(role="alert") 
+							strong Successfully Signed Up!
+							| We look forward to bringing you Notentio.us soon!
+						h3.coolHeading1 
+							em Have you liked us on Facebook yet?
+						<iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fnotentious&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80&amp;appId=336742346496628" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:80px;" allowTransparency="true"></iframe>
+			.form-group
+				.input-group.input-group-lg
+					input.form-control#emailAddress(type="text", placeholder="Email address..." autofocus)
+					span.input-group-btn
+						button.btn.btn-warning#signupBtn(type="button") Sign Up!
+			.checkbox.pull-right.whiteFont
+				label
+					input#receiveCommunications(type="checkbox" checked) Yes, I'd like to receive news from notentio.us!
+
+template(name="how_it_works")
+	.container.container-fluid
+		.row
+			.col-xs-8.col-xs-offset-2
+				.media
+					a.pull-left(href="#")
+						img.img-responsive.img-circle.img-thumbnail.media-object(src="/img/courses.png")
+					.media-body.whiteFont
+						h3.media-heading Join Courses
+						| Find and join your courses to connect with your classmates, recorded lectures, and class notes. 
+				.media
+					a.pull-right(href="#")
+						img.img-responsive.img-circle.img-thumbnail.media-object(src="/img/recording.png")
+					.media-body.whiteFont
+						h3.media-heading Record & Broadcast
+						| Using your phone, tablet, or laptop record your lecture for studying later and broadcast it live to your friends who are running late.
+				.media
+					a.pull-left(href="#")
+						img.img-responsive.img-circle.img-thumbnail.media-object(src="/img/listen.png")
+					.media-body.whiteFont
+						h3.media-heading Listen
+						| Running late to class? Missed a lecture? No problem tune into a live broadcast of your class anywhere anytime or listen to past lectures whenever it's convenient.
+				.media
+					a.pull-right(href="#")
+						img.img-responsive.img-circle.img-thumbnail.media-object(src="/img/noteify.png")
+					.media-body.whiteFont
+						h3.media-heading Noteify!
+						| Trying to find something from your lectures quickly? No problem, we automatically Noteify. All recorded lectures are converted to text notes that can be downloaded, searched, and printed. 
+		.row
+			br
+			br
+			br
